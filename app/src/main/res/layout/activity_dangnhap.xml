@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Dangnhap">
+
+
+    <ImageView
+        android:id="@+id/logoapp2"
+        android:layout_width="188dp"
+        android:layout_height="187dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.068"
+        app:srcCompat="@drawable/logoappp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="296dp"
+        android:layout_height="130dp"
+        android:gravity="center"
+        android:text="Đăng Nhập"
+        android:textColor="@color/black"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.372" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="310dp"
+        android:layout_height="41dp"
+        android:gravity="center"
+        android:text="Đăng nhập để tiếp tục."
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.453" />
+
+    <EditText
+        android:id="@+id/editTexLogEmail"
+        android:layout_width="@dimen/_260sdp"
+        android:layout_height="@dimen/_52sdp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.617" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="137dp"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:text="PASSWORD"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.685" />
+
+    <EditText
+        android:id="@+id/editTextLogPassword"
+        android:layout_width="@dimen/_260sdp"
+        android:layout_height="@dimen/_52sdp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.771" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="103dp"
+        android:layout_height="30dp"
+
+        android:gravity="center_vertical"
+        android:text="EMAIL"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.542" />
+
+    <Button
+        android:id="@+id/logbutton"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:backgroundTint="@color/black"
+        android:text="Login"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/logsignups"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.949" />
+
+    <TextView
+        android:id="@+id/logsignups"
+        android:layout_width="@dimen/_124sdp"
+        android:layout_height="24dp"
+        android:gravity="center"
+        android:text="SIGN UP!"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+</androidx.constraintlayout.widget.ConstraintLayout>

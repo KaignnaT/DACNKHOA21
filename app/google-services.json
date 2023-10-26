@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "985720498504",
+    "project_id": "khoa21c3-dacn",
+    "storage_bucket": "khoa21c3-dacn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985720498504:android:0109384be958a6f8fcab7d",
+        "android_client_info": {
+          "package_name": "com.example.khoa21c3_dacn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKzOYXwnD1bKXEVew7kgmm07U-9X9Hl90"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
