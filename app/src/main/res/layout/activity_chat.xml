@@ -78,17 +78,20 @@
             android:layout_marginEnd="@dimen/_7sdp"
             android:layout_weight="1"
             app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="@dimen/_25sdp">
+            app:cardCornerRadius="@dimen/_25sdp"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:layout_marginRight="@dimen/_7sdp">
 
             <EditText
                 android:id="@+id/textmsg"
-                android:layout_width="338dp"
+                android:layout_width="204dp"
                 android:layout_height="45dp"
-                android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_20sdp"
                 android:background="@null"
                 android:hint="Nhập nội dung.."
-                android:paddingStart="13.00dp" />
+                android:paddingStart="13.00dp"
+                android:paddingLeft="13.00dp" />
 
         </androidx.cardview.widget.CardView>
 
@@ -99,7 +102,8 @@
             android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginEnd="@dimen/_5sdp"
             app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="@dimen/_25sdp">
+            app:cardCornerRadius="@dimen/_25sdp"
+            android:layout_marginRight="@dimen/_5sdp">
 
             <ImageView
                 android:layout_width="45dp"

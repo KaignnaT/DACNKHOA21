@@ -6,6 +6,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -45,6 +46,7 @@ public class Chat extends AppCompatActivity {
     messageAdpter messageAdpter;
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -115,7 +117,7 @@ public class Chat extends AppCompatActivity {
             public void onClick(View v) {
                 String message = textmsg.getText().toString();
                 if (message.isEmpty()) {
-                    Toast.makeText(Chat.this, "Enter The Message First", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Chat.this, "Nhập tin nhắn..", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 textmsg.setText("");

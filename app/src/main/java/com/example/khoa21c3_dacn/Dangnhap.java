@@ -55,17 +55,17 @@ public class Dangnhap extends AppCompatActivity {
 
                 if ((TextUtils.isEmpty(Email))){
                     progressDialog.dismiss();
-                    Toast.makeText(Dangnhap.this, "Enter The Email", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Dangnhap.this, "Nhập Email!", Toast.LENGTH_SHORT).show();
                 }else if (TextUtils.isEmpty(pass)){
                     progressDialog.dismiss();
-                    Toast.makeText(Dangnhap.this, "Enter The Password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Dangnhap.this, "Nhập Password", Toast.LENGTH_SHORT).show();
                 }else if (!Email.matches(emailPattern)){
                     progressDialog.dismiss();
-                    email.setError("Give Proper Email Address");
+                    email.setError("Cung cấp Email thích hợp !");
                 }else if (password.length()<6){
                     progressDialog.dismiss();
-                    password.setError("More Then Six Characters");
-                    Toast.makeText(Dangnhap.this, "Password Needs To Be Longer Then Six Characters", Toast.LENGTH_SHORT).show();
+                    password.setError("Mật khẩu hơn 6 ký tự !");
+                    Toast.makeText(Dangnhap.this, "Mật khẩu cần dài hơn sáu ký tự", Toast.LENGTH_SHORT).show();
                 }else {
                     auth.signInWithEmailAndPassword(Email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override

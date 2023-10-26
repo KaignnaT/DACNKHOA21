@@ -76,21 +76,21 @@ public class Dangky extends AppCompatActivity {
                 String emaill = rg_email.getText().toString();
                 String Password = rg_password.getText().toString();
                 String cPassword = rg_repassword.getText().toString();
-                String status = "Hey I'm Using This Application";
+                String status = "Đang sử dụng";
 
                 if (TextUtils.isEmpty(namee) || TextUtils.isEmpty(emaill) ||
                         TextUtils.isEmpty(Password) || TextUtils.isEmpty(cPassword)){
                     progressDialog.dismiss();
-                    Toast.makeText(Dangky.this, "Please Enter Valid Information", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Dangky.this, "Vui lòng nhập thông tin đầy đủ!", Toast.LENGTH_SHORT).show();
                 }else  if (!emaill.matches(emailPattern)){
                     progressDialog.dismiss();
-                    rg_email.setError("Type A Valid Email Here");
+                    rg_email.setError("Nhập địa chỉ Email");
                 }else if (Password.length()<6){
                     progressDialog.dismiss();
-                    rg_password.setError("Password Must Be 6 Characters Or More");
+                    rg_password.setError("Mật khẩu phải có 6 ký tự trở lên");
                 }else if (!Password.equals(cPassword)){
                     progressDialog.dismiss();
-                    rg_password.setError("The Password Doesn't Match");
+                    rg_password.setError("Mật khẩu không trùng khớp !");
                 }else {
                     auth.createUserWithEmailAndPassword(emaill,Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
@@ -119,7 +119,7 @@ public class Dangky extends AppCompatActivity {
                                                                     startActivity(intent);
                                                                     finish();
                                                                 }else {
-                                                                    Toast.makeText(Dangky.this, "Error in creating the user", Toast.LENGTH_SHORT).show();
+                                                                    Toast.makeText(Dangky.this, "Error", Toast.LENGTH_SHORT).show();
                                                                 }
                                                             }
                                                         });

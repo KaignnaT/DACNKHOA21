@@ -53,7 +53,7 @@ public class messageAdpter extends RecyclerView.Adapter {
             @Override
             public boolean onLongClick(View view) {
                 new AlertDialog.Builder(context).setTitle("Delete")
-                        .setMessage("Are you sure you want to delete this message?")
+                        .setMessage("Bạn có chắc chắn muốn xóa tin nhắn này?")
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
