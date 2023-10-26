@@ -1,19 +1,17 @@
 package com.example.khoa21c3_dacn;
 
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.annotation.SuppressLint;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -31,16 +29,16 @@ import java.util.Date;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Chat extends AppCompatActivity {
-    String reciverimg,reciverUid,reciverName,SenderUID;
+    String reciverimg, reciverUid, reciverName, SenderUID;
     CircleImageView profile;
     TextView reciverNName;
     CardView sendbtn;
     EditText textmsg;
-    FirebaseDatabase database;
-    FirebaseAuth firebaseAuth;
-    public  static String senderImg;
-    public  static String reciverIImg;
-    String senderRoom,reciverRoom;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+    public static String senderImg;
+    public static String reciverIImg;
+    String senderRoom, reciverRoom;
     RecyclerView mmessagesAdapter;
     ArrayList<Kieumau> messagesArrayList;
     messageAdpter messageAdpter;
@@ -52,12 +50,16 @@ public class Chat extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
-
-        mmessagesAdapter=findViewById(R.id.msgadpter);
+        findViewById(R.id.back).setOnClickListener(
+                view -> {
+                    finish();
+                }
+        );
+        mmessagesAdapter = findViewById(R.id.msgadpter);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setStackFromEnd(true);
         mmessagesAdapter.setLayoutManager(linearLayoutManager);
-        messageAdpter = new messageAdpter(Chat.this,messagesArrayList);
+        messageAdpter = new messageAdpter(Chat.this, messagesArrayList);
         mmessagesAdapter.setAdapter(messageAdpter);
 
 
