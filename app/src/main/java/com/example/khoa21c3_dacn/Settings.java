@@ -71,6 +71,8 @@ public class Settings extends AppCompatActivity {
                 setname.setText(name);
                 setstatus.setText(status);
                 Picasso.get().load(profile).into(setprofile);
+
+
             }
 
             @Override
@@ -92,7 +94,6 @@ public class Settings extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 progressDialog.show();
-
                 String name = setname.getText().toString();
                 String Status = setstatus.getText().toString();
                 if (setImageUri!=null){

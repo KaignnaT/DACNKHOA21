@@ -4,31 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue"
+    android:background="@drawable/chatback"
     tools:context=".Chat">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/ll1"
-        android:gravity="center">
 
-        <ImageView
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="173dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
             android:id="@+id/back"
-            android:layout_width="47dp"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="180dp"
-            android:background="@drawable/back"
-            android:transitionName="loout_img" />
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="Back"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profileimgg"
-            android:layout_width="@dimen/_80sdp"
-            android:layout_height="@dimen/_80sdp"
+            android:layout_width="89dp"
+            android:layout_height="80dp"
+
             android:src="@drawable/photocamera"
             app:civ_border_color="@color/white"
-            android:layout_marginTop="0dp"
             app:civ_border_width="@dimen/_2sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -38,13 +42,15 @@
 
         <TextView
             android:id="@+id/recivername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="name"
+            android:layout_width="201dp"
+            android:layout_height="45dp"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_marginLeft="100dp"
             android:gravity="center"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_15sdp"
-            android:layout_margin="@dimen/_10sdp"/>
+            android:text="name"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
@@ -52,11 +58,11 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/msgadpter"
         android:layout_width="match_parent"
-        android:layout_height="502dp"
+        android:layout_height="513dp"
         android:layout_above="@id/ll2"
         android:layout_below="@+id/ll1"
-        android:layout_marginTop="7dp"
-        android:layout_marginBottom="-7dp"
+        android:layout_marginTop="-12dp"
+        android:layout_marginBottom="-9dp"
         android:padding="@dimen/_10sdp" />
 
     <LinearLayout
@@ -84,10 +90,10 @@
 
             <EditText
                 android:id="@+id/textmsg"
-                android:layout_width="204dp"
-                android:layout_height="45dp"
+                android:layout_width="248dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="28dp"
                 android:background="@null"
                 android:hint="Nhập nội dung.."
                 android:paddingStart="13.00dp"

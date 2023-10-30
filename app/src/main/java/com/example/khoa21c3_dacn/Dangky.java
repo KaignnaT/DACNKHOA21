@@ -129,7 +129,7 @@ public class Dangky extends AppCompatActivity {
                                         }
                                     });
                                 }else {
-                                    String status = "Hey I'm Using This Application";
+                                    String status = "";
                                     imageuri = "https://firebasestorage.googleapis.com/v0/b/khoa21c3-dacn.appspot.com/o/khang.jpg?alt=media&token=39b9417b-0d12-42f0-8d1a-19e5b4b4ab5d";
                                     User users = new User(id,namee,emaill,Password,imageuri,status);
                                     reference.setValue(users).addOnCompleteListener(new OnCompleteListener<Void>() {

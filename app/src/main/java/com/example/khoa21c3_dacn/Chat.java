@@ -57,8 +57,8 @@ public class Chat extends AppCompatActivity {
         );
         mmessagesAdapter = findViewById(R.id.msgadpter);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        linearLayoutManager.setStackFromEnd(true);
         mmessagesAdapter.setLayoutManager(linearLayoutManager);
+        linearLayoutManager.setStackFromEnd(true);
         messageAdpter = new messageAdpter(Chat.this, messagesArrayList);
         mmessagesAdapter.setAdapter(messageAdpter);
 
